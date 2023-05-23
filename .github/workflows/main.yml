@@ -1,0 +1,16 @@
+name: Morning Greeting
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Print greeting
+      run: echo "早安！祝您有个美好的一天！"
